@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import Image from 'next/image';
-import { animate, stagger } from 'motion';
+import { animate } from 'framer-motion';
 
 const DropdownGrid = () => {
   const sites = [
@@ -31,31 +31,20 @@ const DropdownGrid = () => {
   ];
 
   useEffect(() => {
-    animate(
-      ".card",
-      { y: 0, opacity: 1 },
-      { delay: stagger(0.1) }
-    );
+    const elements = document.querySelectorAll('.card');
+    elements.forEach(element => {
+      animate(element, { scale: [0.4, 1] }, { ease: "circInOut", duration: 1.2 });
+    });
   }, []);
-
+  
   return (
-    <div className="grid grid-cols-4 gap-4 mt-8">
+    <div className="grid grid-cols-3 gap-4">
       {sites.map((site, index) => (
-        <div key={index} className="card border p-4 rounded-lg hover:bg-[#708070] flex flex-col items-center group">
-          <div className="flex justify-center items-center mb-4">
-            <Image
-              src={site.image}
-              alt={site.name}
-              width={200}
-              height={150}
-              className="rounded-t-lg"
-            />
-          </div>
-          <h3 className="font-bold mb-2 text-center">{site.name}</h3>
-          <p className="mb-4 text-center">{site.description}</p>
-          <a href={site.url} target="_blank" rel="noopener noreferrer" className="text-[#708070] group-hover:text-black hover:underline">
-            Visit Site
-          </a>
+        <div key={index} className="card border p-4 rounded-lg hover:bg-[var(--eucalyptus)] flex flex-col items-center group" style={{ borderColor: 'var(--blue-green)' }}>
+          <Image src={site.image} alt={site.name} width={200} height={200} />
+          <h3 className="mt-2 text-xl font-medium" style={{ color: 'var(--dark-green)' }}>{site.name}</h3>
+          <p className="mt-2" style={{ color: 'var(--dark-eucalyptus)' }}>{site.description}</p>
+          <a href={site.url} className="mt-2" style={{ color: 'var(--eucalyptus)' }}>Visit Site</a>
         </div>
       ))}
     </div>

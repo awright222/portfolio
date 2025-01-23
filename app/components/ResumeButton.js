@@ -12,7 +12,8 @@ export default function ResumeButton() {
     <>
       <button
         onClick={toggleModal}
-        className="mt-4 px-4 py-2 bg-[#708070] text-white rounded hover:bg-[#666865]"
+        className="mt-4 px-4 py-2 text-white rounded hover:bg-[var(--dark-eucalyptus)]"
+        style={{ backgroundColor: 'var(--eucalyptus)' }}
       >
         Resume
       </button>
