@@ -44,8 +44,8 @@ const Page = () => {
       <div className="col-span-3 p-2">
         <div className="grid grid-cols-4 gap-2">
           
-          <div className="p-2 border rounded-md shadow">
-            <h3 className="text-md font-semibold mb-1">Frontend Technologies</h3>
+          <div className="p-2 border rounded-md">
+            <h3 className="text-md font-semibold mb-1">FRONTEND TECHNOLOGIES</h3>
             <ul className="list-disc ml-4">
               <li>React</li>
               <li>Next.js</li>
@@ -55,8 +55,8 @@ const Page = () => {
           </div>
 
           
-          <div className="p-2 border rounded-md shadow">
-            <h3 className="text-md font-semibold mb-1">Backend Technologies</h3>
+          <div className="p-2 border rounded-md">
+            <h3 className="text-md font-semibold mb-1">BACKEND TECHNOLOGIES</h3>
             <ul className="list-disc ml-4">
               <li>Node.js</li>
               <li>Express.js</li>
@@ -65,8 +65,8 @@ const Page = () => {
           </div>
 
           
-          <div className="p-2 border rounded-md shadow">
-            <h3 className="text-md font-semibold mb-1">Databases and ORMs</h3>
+          <div className="p-2 border rounded-md">
+            <h3 className="text-md font-semibold mb-1">DATABASES & ORMS</h3>
             <ul className="list-disc ml-4">
               <li>Sequelize</li>
               <li>SQLAlchemy</li>
@@ -76,8 +76,8 @@ const Page = () => {
           </div>
 
           
-          <div className="p-2 border rounded-md shadow">
-            <h3 className="text-md font-semibold mb-1">Core Languages</h3>
+          <div className="p-2 border rounded-md">
+            <h3 className="text-md font-semibold mb-1">CORE LANGUAGES</h3>
             <ul className="list-disc ml-4">
               <li>JavaScript</li>
               <li>Python</li>
