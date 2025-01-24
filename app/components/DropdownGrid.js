@@ -39,11 +39,11 @@ const DropdownGrid = () => {
           className="card p-4 rounded-lg bg-white transition-transform duration-300 transform hover:scale-105 flex flex-col items-center group" 
           style={{ 
             boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px',
-            backgroundColor: 'rgba(68, 216, 144, 0.15)', // Slight transparent background for default
+    
             transition: 'background-color 0.3s ease, transform 0.3s ease'
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.backgroundColor = 'rgba(68, 216, 144, 0.15)'; // Lighter hover effect with more transparency
+            e.currentTarget.style.backgroundColor = 'rgba(31, 41, 55, 0.2)';
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.backgroundColor = 'white'; 

@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { animate } from 'framer-motion';
 
 const ContactInfo = () => {
+  useEffect(() => {
+    const element = document.querySelector('.contact-info');
+    animate(element, { scale: [0.4, 1] }, { ease: "circInOut", duration: 1.2 });
+  }, []);
+
   return (
-    <div className="mt-0 p-4 bg-gray-800 bg-opacity-20 rounded-lg shadow-md">
+    <div className="contact-info mt-0 p-4 bg-gray-800 bg-opacity-20 rounded-lg shadow-md">
       <h2 className="text-2xl font-semibold">CONTACT ME</h2>
       <p className="mt-2">Email: <a href="mailto:alex.gr.wright@gmail.com" className="text-[#708070]">alex.gr.wright@gmail.com</a></p>
       <p>Phone: <a href="tel:+18313313051" className="text-[#708070]">+1 (831) 331-3051</a></p>
