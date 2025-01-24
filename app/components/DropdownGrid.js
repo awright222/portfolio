@@ -39,7 +39,6 @@ const DropdownGrid = () => {
           className="card p-4 rounded-lg bg-white transition-transform duration-300 transform hover:scale-105 flex flex-col items-center group" 
           style={{ 
             boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px',
-    
             transition: 'background-color 0.3s ease, transform 0.3s ease'
           }}
           onMouseEnter={(e) => {
@@ -52,7 +51,14 @@ const DropdownGrid = () => {
           <Image src={site.image} alt={site.name} width={200} height={200} />
           <h3 className="mt-2 text-xl font-medium text-[var(--dark-green)]">{site.name}</h3>
           <p className="mt-2 text-[var(--dark-eucalyptus)]">{site.description}</p>
-          <a href={site.url} className="mt-2 text-[var(--eucalyptus)] hover:underline">Visit Site</a>
+          <a 
+            href={site.url} 
+            className="mt-2 text-[var(--eucalyptus)] hover:underline"
+            target="_blank" 
+            rel="noopener noreferrer" 
+          >
+            Visit Site
+          </a>
         </div>
       ))}
     </div>
