@@ -6,7 +6,7 @@ export default function ResumeButton() {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    // Select the button and apply the animation
+    
     const element = document.querySelector(".resume-button");
     animate(element, { scale: [0.4, 1] }, { ease: "circInOut", duration: 1.2 });
   }, []);
@@ -21,9 +21,9 @@ export default function ResumeButton() {
         onClick={toggleModal}
         className="resume-button group mt-8 px-8 py-6 text-white font-semibold rounded-full flex items-center justify-between relative overflow-hidden transition-all duration-500 ease-in-out bg-[#354F52] hover:bg-[#84A98C]"
       >
-        {/* Text with Right Margin */}
+       
         <span className="relative z-10 mr-4">RESUME</span>
-        {/* Circle and Arrow */}
+       
         <div className="relative flex items-center justify-center w-8 h-8 ml-auto">
           <svg
             className="relative z-10 transform transition-transform duration-500 ease-in-out group-hover:rotate-45"
