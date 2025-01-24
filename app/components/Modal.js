@@ -5,20 +5,19 @@ export default function Modal({ isOpen, onClose }) {
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-      <div className="bg-white p-6 rounded shadow-lg">
-        <h2 className="text-xl font-bold mb-4">RESUME</h2>
-        <p className="mb-4">Click the button below to download my resume.</p>
-        <a href="/path/to/resume.pdf" download>
-          <button className="bg-[#52796F] text-white px-4 py-2 rounded">
-            Download Resume
-          </button>
-        </a>
+      <div className="bg-white p-6 rounded shadow-lg w-full max-w-3xl relative">
         <button
-          className="mt-4 text-[#2F3E46]"
+          className="absolute top-2 right-2 text-[#2F3E46] text-4xl"
           onClick={onClose}
         >
-          Close
+          &times;
         </button>
+        <h2 className="text-xl font-bold mb-4">RESUME</h2>
+        <iframe
+          src="/awrightresume.pdf"
+          className="w-full h-96 mb-4"
+          title="Resume"
+        ></iframe>
       </div>
     </div>
   );

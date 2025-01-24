@@ -12,7 +12,7 @@ export default function ResumeButton() {
     <>
       <button
         onClick={toggleModal}
-        className="group mt-4 px-8 py-6 text-white font-semibold rounded-full flex items-center relative overflow-hidden transition-all duration-500 ease-in-out bg-[#354F52] hover:bg-[#84A98C]"
+        className="group mt-8 px-8 py-6 text-white font-semibold rounded-full flex items-center relative overflow-hidden transition-all duration-500 ease-in-out bg-[#354F52] hover:bg-[#84A98C]"
       >
         <span className="mr-8 relative z-10">RESUME</span>
         <svg
