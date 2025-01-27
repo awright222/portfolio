@@ -22,6 +22,12 @@ const DropdownGrid = () => {
       description: 'Helping people achieve access to outdoor adventures using: Python, Flask, SQLAlchemy, Docker, Redux Toolkit',
       image: '/guide_finder.png' 
     },
+    {
+      name: 'Mortgage Calculator',
+      url: 'https://mortgage-calculator-beige-nine.vercel.app/',
+      description: 'A simple mortgage calculator using: next.js, tailwindcss',
+      image: '/mortgage_calculator.png' 
+    },
   ];
 
   useEffect(() => {
