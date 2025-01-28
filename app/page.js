@@ -23,17 +23,20 @@ const Page = () => {
       </div>
 
       
-      <div className="col-span-1 row-span-1 flex flex-col items-center p-2">
-        <Image
-          src="/aw_nobg.png"
-          alt="Logo"
-          width={150} 
-          height={150}
-          className="rounded-full mb-2"
-        />
-        <ContactInfo />
-        <ResumeButton onClick={handleModalToggle} />
-      </div>
+      <div className="col-span-1 row-span-1 flex flex-col items-center p-2 pt-10">
+  <ContactInfo />
+  <ResumeButton onClick={handleModalToggle} />
+  <Image
+    src="/IMG_1563.JPG"
+    alt="Alex Wright"
+    width={175}
+    height={200}
+    className="object-cover rounded-full mt-4"
+    style={{
+      boxShadow: "rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px"
+    }}
+  />
+</div>
 
       
       <div className="col-span-3 flex justify-center">
