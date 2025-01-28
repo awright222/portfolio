@@ -5,19 +5,7 @@ import { animate } from 'framer-motion';
 const DropdownGrid = () => {
   const sites = [
     { 
-      name: 'MIGRATION STATION', 
-      url: 'https://migrationstation-yv8v.onrender.com',
-      description: 'Vacation rental clone using: Express, SQL, React, Redux',
-      image: '/migration_station.png'
-    },
-    {
-      name: 'LOVELY PAWS',
-      url: 'https://lovely-paws-hotel-grvv.onrender.com',
-      description: 'Pet boarding and services using: Python, Flask, SQLAlchemy, Docker, Redux Toolkit',
-      image: '/lovely_paws.png'
-    },
-    {
-      name: 'GUIDE FINDER',
+      name: 'GUIDE FINDER', 
       url: 'https://guide-finder.onrender.com/',
       description: 'Helping people achieve access to outdoor adventures using: Python, Flask, SQLAlchemy, Docker, Redux Toolkit',
       image: '/guide_finder.png' 
@@ -27,6 +15,18 @@ const DropdownGrid = () => {
       url: 'https://mortgage-calculator-beige-nine.vercel.app/',
       description: 'A simple mortgage calculator using: next.js, tailwindcss',
       image: '/mortgage_calculator.png' 
+    },
+    {
+      name: 'LOVELY PAWS',
+      url: 'https://lovely-paws-hotel-grvv.onrender.com',
+      description: 'Pet boarding and services using: Python, Flask, SQLAlchemy, Docker, Redux Toolkit',
+      image: '/lovely_paws.png'
+    },
+    { 
+      name: 'MIGRATION STATION', 
+      url: 'https://migrationstation-yv8v.onrender.com',
+      description: 'Vacation rental clone using: Express, SQL, React, Redux',
+      image: '/migration_station.png'
     },
   ];
 

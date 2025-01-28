@@ -47,7 +47,7 @@ const Page = () => {
       <div className="col-span-3 p-2">
         <div className="grid grid-cols-4 gap-2">
           
-          <div className="p-2 border rounded-md">
+          <div className="p-2 rounded-md">
             <h3 className="text-md font-semibold mb-1">FRONTEND TECHNOLOGIES</h3>
             <ul className="list-disc ml-4">
               <li>React</li>
@@ -58,7 +58,7 @@ const Page = () => {
           </div>
 
           
-          <div className="p-2 border rounded-md">
+          <div className="p-2 rounded-md">
             <h3 className="text-md font-semibold mb-1">BACKEND TECHNOLOGIES</h3>
             <ul className="list-disc ml-4">
               <li>Node.js</li>
@@ -68,7 +68,7 @@ const Page = () => {
           </div>
 
           
-          <div className="p-2 border rounded-md">
+          <div className="p-2 rounded-md">
             <h3 className="text-md font-semibold mb-1">DATABASES & ORMS</h3>
             <ul className="list-disc ml-4">
               <li>Sequelize</li>
@@ -79,7 +79,7 @@ const Page = () => {
           </div>
 
           
-          <div className="p-2 border rounded-md">
+          <div className="p-2 rounded-md">
             <h3 className="text-md font-semibold mb-1">CORE LANGUAGES</h3>
             <ul className="list-disc ml-4">
               <li>JavaScript</li>
