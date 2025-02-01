@@ -10,7 +10,7 @@ const DropdownGrid = () => {
     { 
       name: 'GUIDE FINDER', 
       url: 'https://guide-finder.onrender.com/',
-      description: 'Helping people achieve access to outdoor adventures.',
+      description: 'Helping people achieve access to outdoor adventures. Please excuse the speed of load. This project is hosted on Render and it will take 10-15 seconds to load.',
       image: '/guide_finder.png',
       tools: ['Python', 'Flask', 'SQLAlchemy', 'Docker', 'Redux Toolkit'],
       details: [
@@ -34,7 +34,7 @@ const DropdownGrid = () => {
     {
       name: 'LOVELY PAWS',
       url: 'https://lovely-paws-hotel-grvv.onrender.com',
-      description: 'Pet boarding and services',
+      description: 'Pet boarding and services. Please excuse the speed of load. This project is hosted on Render and it will take 10-15 seconds to load.',
       image: '/lovely_paws.png',
       tools: ['Python', 'Flask', 'SQLAlchemy', 'Docker', 'Redux Toolkit'],
       details: [
@@ -46,7 +46,7 @@ const DropdownGrid = () => {
     { 
       name: 'MIGRATION STATION', 
       url: 'https://migrationstation-yv8v.onrender.com',
-      description: 'Vacation rental clone.',
+      description: 'Vacation rental clone. Please excuse the speed of load. This project is hosted on Render and it will take 10-15 seconds to load.',
       image: '/migration_station.png',
       tools: ['Express', 'SQL', 'React', 'Redux'],
       details: [
