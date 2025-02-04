@@ -77,7 +77,7 @@ const DropdownGrid = () => {
       {sites.map((site, index) => (
         <div 
           key={index} 
-          className="card p-6 rounded-lg bg-white transition-transform duration-300 transform hover:scale-105 flex flex-col items-center group" 
+          className="card p-6 rounded-lg bg-white transition-transform duration-300 transform hover:scale-105 flex flex-col items-center group cursor-pointer" 
           style={{ 
             boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px',
             transition: 'background-color 0.3s ease, transform 0.3s ease',
