@@ -16,13 +16,11 @@ const Page = () => {
   };
 
   return (
-    <div className="grid grid-cols-3 auto-rows-[min-content] gap-4 w-full mb-4">
-
+    <div className="grid grid-cols-3 auto-rows-[min-content] gap-4 w-full mb-4 pl-16 pr-8 mx-auto">
       <div className="col-span-2 row-span-1 p-2">
         <About />
       </div>
 
-  
       <div className="col-span-1 row-span-1 flex flex-col items-center p-2 pt-10">
         <ContactInfo />
         <ResumeButton onClick={handleModalToggle} />
@@ -39,12 +37,10 @@ const Page = () => {
         />
       </div>
 
-
       <div className="col-span-3 flex justify-center">
         <hr className="w-[75%] border-t-2 border-gray-300 my-4" />
       </div>
 
-   
       <div className="col-span-3 p-2">
         <div className="grid grid-cols-4 gap-2">
           <div className="p-2 rounded-md">
@@ -86,12 +82,10 @@ const Page = () => {
         </div>
       </div>
 
-      
       <div className="col-span-3 flex flex-col items-center p-2">
         <DropdownGrid />
       </div>
 
-      
       {isModalOpen && <Modal onClose={handleModalToggle} />}
     </div>
   );
