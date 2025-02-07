@@ -1,5 +1,7 @@
 ## Alex's Portfolio!
 
+My professional portfolio. I wanted to use practice my Next.js and Tailwind.CSS skills and decided to make my portfolio page!
+
 # Find Me!
 [Portfolio](https://www.alexwrightportfolio.com/) | [LinkedIn](www.linkedin.com/in/alexgwright2)  | [GitHub](https://github.com/awright222)
 
