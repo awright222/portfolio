@@ -1,3 +1,10 @@
+## Alex's Portfolio!
+
+# Find Me!
+[Portfolio](https://www.alexwrightportfolio.com/) | [LinkedIn](www.linkedin.com/in/alexgwright2)  | [GitHub](https://github.com/awright222)
+
+![portfolio home](portfolio.png)
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
