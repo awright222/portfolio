@@ -10,7 +10,7 @@ const About = () => {
         <div className="content-container flex">
           <div className="text-container">
             <p className="mb-4">
-            I’m a passionate full-stack software engineer with a unique blend of technical expertise, client relations, and strategic leadership. My journey into software development began with an intensive six-month bootcamp at App Academy, where I gained hands-on experience in JavaScript, Python, React, Redux Toolkit, Flask, and SQL, building modern, user-focused web applications.            </p>
+            I’m a passionate technical consultant and full-stack software engineer with a unique blend of technical expertise, client relations, and strategic leadership. My journey into software development began with an intensive six-month bootcamp at App Academy, where I gained hands-on experience in JavaScript, Python, React, Redux Toolkit, Flask, and SQL, building modern, user-focused web applications.            </p>
             <p className="mb-4">
             Beyond writing code, I specialize in bridging technology with business needs. Whether it’s developing scalable applications, designing efficient APIs, or optimizing user experiences, I thrive on creating innovative solutions that drive value for both users and stakeholders. My ability to communicate complex technical concepts in a clear and strategic manner enables me to collaborate effectively across teams—from engineers to executives to customers.
             </p>
