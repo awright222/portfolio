@@ -21,7 +21,7 @@ const About = () => {
             I’m driven by curiosity, adaptability, and a passion for problem-solving. Whether working with customers, engineering teams, or leadership, I bring a solution-oriented mindset that ensures the successful implementation of technology that aligns with business goals.
             </p>
             <p className="mb-4">
-            When I’m not building software, you’ll find me exploring the outdoors, spending time with family, taking care of the chickens, or brainstorming the next big project.
+            When I’m not building software, you’ll find me exploring the outdoors, spending time with family, or brainstorming the next big project!
             </p>
             <p className="mb-4">
             Let’s connect! Whether you're looking for a software engineer, a technical consultant, or a solutions-focused strategist, I’d love to chat about how we can work together.
