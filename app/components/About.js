@@ -24,7 +24,7 @@ const About = () => {
             When I’m not building software, you’ll find me exploring the outdoors, spending time with family, or brainstorming the next big project!
             </p>
             <p className="mb-4">
-            Let’s connect! Whether you're looking for a software engineer, a technical consultant, or a solutions-focused strategist, I’d love to chat about how we can work together.
+            Let’s connect!! Whether you're looking for a software engineer, a technical consultant, or a solutions-focused strategist, I’d love to chat about how we can work together.
             </p>
           </div>
         </div>
