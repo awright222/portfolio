@@ -140,7 +140,7 @@ const HeroSection = () => {
           </div>
           <div className="flex items-center gap-2 glass px-4 py-2 rounded-full">
             <Rocket className="w-5 h-5 text-accent" />
-            <span>Technical Consulting</span>
+            <span>Technical Consulting & Solutions</span>
           </div>
         </motion.div>
 
