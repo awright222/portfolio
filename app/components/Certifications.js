@@ -148,14 +148,6 @@ const Certifications = () => {
           <p className="text-textSecondary mb-6">
             I'm committed to continuous learning and staying current with the latest technologies and industry standards.
           </p>
-          <motion.div
-            className="inline-flex items-center gap-2 px-6 py-3 glass rounded-2xl glow-hover text-primary hover:text-secondary transition-colors cursor-pointer"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <ExternalLink className="w-4 h-4" />
-            <span>View All Certifications</span>
-          </motion.div>
         </motion.div>
       </div>
 

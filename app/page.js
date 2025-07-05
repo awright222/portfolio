@@ -132,15 +132,15 @@ const HeroSection = () => {
         >
           <div className="flex items-center gap-2 glass px-4 py-2 rounded-full">
             <Code className="w-5 h-5 text-primary" />
-            <span>React & Next.js</span>
+            <span>Full-Stack Development</span>
           </div>
           <div className="flex items-center gap-2 glass px-4 py-2 rounded-full">
             <Palette className="w-5 h-5 text-secondary" />
-            <span>Modern Design</span>
+            <span>UI/UX Design</span>
           </div>
           <div className="flex items-center gap-2 glass px-4 py-2 rounded-full">
             <Rocket className="w-5 h-5 text-accent" />
-            <span>Performance</span>
+            <span>Technical Consulting</span>
           </div>
         </motion.div>
 
