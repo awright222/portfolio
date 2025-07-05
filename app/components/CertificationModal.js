@@ -3,7 +3,9 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Download, ExternalLink } from "lucide-react";
 
-export default function Modal({ onClose }) {
+export default function CertificationModal({ certification, onClose }) {
+  if (!certification) return null;
+
   const modalVariants = {
     hidden: { opacity: 0, scale: 0.8 },
     visible: { 
@@ -58,10 +60,20 @@ export default function Modal({ onClose }) {
         >
           {/* Header */}
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-2xl font-bold gradient-text">RESUME</h2>
+            <div className="flex items-center gap-3">
+              <div className={`p-3 rounded-2xl bg-gradient-to-br ${certification.color}`}>
+                <div className="text-white">
+                  {certification.icon}
+                </div>
+              </div>
+              <div>
+                <h2 className="text-2xl font-bold gradient-text">{certification.name}</h2>
+                <p className="text-textSecondary">{certification.issuer} • {certification.date}</p>
+              </div>
+            </div>
             <div className="flex items-center gap-3">
               <motion.a
-                href="/awrightresume.pdf"
+                href={certification.pdfUrl}
                 download
                 className="flex items-center gap-2 px-4 py-2 glass rounded-xl glow-hover text-primary hover:text-secondary transition-colors"
                 whileHover={{ scale: 1.05 }}
@@ -81,19 +93,36 @@ export default function Modal({ onClose }) {
             </div>
           </div>
 
-          {/* Resume iframe */}
+          {/* Description */}
+          <div className="mb-6">
+            <p className="text-textSecondary leading-relaxed mb-4">
+              {certification.description}
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {certification.skills.map((skill, index) => (
+                <span
+                  key={index}
+                  className="px-3 py-1 glass rounded-full text-sm text-textSecondary"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Certificate iframe */}
           <div className="relative rounded-2xl overflow-hidden">
             <iframe
-              src="/awrightresume.pdf"
+              src={certification.pdfUrl}
               className="w-full h-[70vh] border-0"
-              title="Resume"
+              title={`${certification.name} Certificate`}
             />
           </div>
 
           {/* Footer */}
           <div className="mt-6 flex justify-center">
             <motion.a
-              href="/awrightresume.pdf"
+              href={certification.pdfUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-6 py-3 glass rounded-2xl glow-hover text-primary hover:text-secondary transition-colors"

@@ -1,57 +1,37 @@
-import React, { useState, useEffect } from "react";
-import { animate } from "framer-motion";
-import Modal from "./Modal";
+"use client";
 
-export default function ResumeButton() {
-  const [isOpen, setIsOpen] = useState(false);
+import React from "react";
+import { motion } from "framer-motion";
+import { FileText, ExternalLink } from "lucide-react";
 
-  useEffect(() => {
-    const element = document.querySelector(".resume-button");
-    animate(element, { scale: [0.4, 1] }, { ease: "circInOut", duration: 1.2 });
-  }, []);
-
-  const toggleModal = () => {
-    setIsOpen(!isOpen);
-  };
-
+export default function ResumeButton({ onClick }) {
   return (
-    <>
-      <button
-        onClick={toggleModal}
-        className="resume-button group mt-8 px-8 py-6 text-white font-semibold rounded-full flex items-center justify-between relative overflow-hidden transition-all duration-500 ease-in-out bg-[#354F52] hover:bg-[#84A98C]"
-        style={{
-          boxShadow: "rgba(0, 0, 0, 0.1) 0px 2px 4px"
-        }}
+    <motion.button
+      onClick={onClick}
+      className="mt-6 px-8 py-4 glass rounded-2xl font-semibold flex items-center justify-center gap-3 group relative overflow-hidden glow-hover"
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      transition={{ type: "spring", stiffness: 300 }}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+    >
+      <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-20 group-hover:opacity-30 transition-opacity duration-300" />
+      
+      <FileText className="w-5 h-5 text-primary group-hover:text-secondary transition-colors" />
+      
+      <span className="relative z-10 text-textPrimary group-hover:text-white transition-colors">
+        VIEW RESUME
+      </span>
+      
+      <motion.div
+        className="text-primary group-hover:text-secondary transition-colors"
+        animate={{ rotate: 0 }}
+        whileHover={{ rotate: 45 }}
+        transition={{ type: "spring", stiffness: 300 }}
       >
-        <span className="relative z-10 mr-4">RESUME</span>
-        <div className="relative flex items-center justify-center w-8 h-8 ml-auto">
-          <svg
-            className="relative z-10 transform transition-transform duration-500 ease-in-out group-hover:rotate-45"
-            width="16"
-            height="16"
-            viewBox="0 0 16 16"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M4.66669 11.3334L11.3334 4.66669"
-              stroke="white"
-              strokeWidth="1.33333"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M4.66669 4.66669H11.3334V11.3334"
-              stroke="white"
-              strokeWidth="1.33333"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-          <div className="absolute inset-0 bg-[#84A98C] rounded-full transition-all duration-500 ease-in-out group-hover:w-full group-hover:h-full"></div>
-        </div>
-      </button>
-      {isOpen && <Modal isOpen={isOpen} onClose={toggleModal} />}
-    </>
+        <ExternalLink className="w-4 h-4" />
+      </motion.div>
+    </motion.button>
   );
 }

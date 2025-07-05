@@ -9,7 +9,26 @@ export default {
     extend: {
       colors: {
         background: "var(--background)",
-        foreground: "var(--foreground)",
+        surface: "var(--surface)",
+        primary: "var(--primary)",
+        secondary: "var(--secondary)",
+        accent: "var(--accent)",
+        textPrimary: "var(--text-primary)",
+        textSecondary: "var(--text-secondary)",
+        textMuted: "var(--text-muted)",
+        border: "var(--border)",
+      },
+      animation: {
+        float: "float 6s ease-in-out infinite",
+        gradientText: "gradientText 4s ease infinite",
+        particleFloat: "particleFloat 20s linear infinite",
+        staggerIn: "staggerIn 0.6s ease forwards",
+      },
+      backdropBlur: {
+        'xs': '2px',
+      },
+      fontFamily: {
+        'mono': ['JetBrains Mono', 'monospace'],
       },
     },
   },
