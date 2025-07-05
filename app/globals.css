@@ -67,7 +67,7 @@ body::before {
   }
 }
 
-/* Glass morphism effect */
+/* Glass morphism */
 .glass {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
@@ -86,7 +86,7 @@ body::before {
   transition: all 0.3s ease;
 }
 
-/* Animated gradient text */
+/* Gradient text */
 .gradient-text {
   background: linear-gradient(45deg, var(--primary), var(--secondary), var(--accent));
   background-size: 300% 300%;
@@ -119,7 +119,7 @@ body::before {
   }
 }
 
-/* Pulse animation */
+/* Pulse glow */
 .pulse-glow {
   animation: pulseGlow 2s ease-in-out infinite;
 }
@@ -133,7 +133,7 @@ body::before {
   }
 }
 
-/* Custom scrollbar */
+/* Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }

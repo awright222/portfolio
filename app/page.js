@@ -14,11 +14,17 @@ import Certifications from "./components/Certifications";
 // Particle component for animated background
 const Particle = ({ delay = 0 }) => {
   const [position, setPosition] = useState({
-    x: Math.random() * window.innerWidth,
-    y: window.innerHeight + 100,
+    x: 0,
+    y: 0,
   });
 
   useEffect(() => {
+    // Initialize position on client side
+    setPosition({
+      x: Math.random() * window.innerWidth,
+      y: window.innerHeight + 100,
+    });
+
     const interval = setInterval(() => {
       setPosition({
         x: Math.random() * window.innerWidth,
