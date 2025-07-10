@@ -150,6 +150,40 @@ const ProjectModal = ({ site, onClose }) => {
             </div>
           </div>
 
+          {/* Demo Credentials */}
+          {site.demoCredentials && (
+            <div className="mb-8">
+              <h3 className="text-lg font-semibold text-textPrimary mb-3 flex items-center gap-2">
+                <Code className="w-5 h-5 text-accent" />
+                Demo Login Credentials
+              </h3>
+              <div className="space-y-4">
+                <div className="glass p-4 rounded-xl">
+                  <h4 className="text-sm font-semibold text-primary mb-2">Teacher Account (Test Creation)</h4>
+                  <div className="space-y-1 text-sm">
+                    <p className="text-textSecondary">
+                      <span className="text-textPrimary font-medium">Email:</span> {site.demoCredentials.teacher.email}
+                    </p>
+                    <p className="text-textSecondary">
+                      <span className="text-textPrimary font-medium">Password:</span> {site.demoCredentials.teacher.password}
+                    </p>
+                  </div>
+                </div>
+                <div className="glass p-4 rounded-xl">
+                  <h4 className="text-sm font-semibold text-secondary mb-2">Student Account (Test Taking)</h4>
+                  <div className="space-y-1 text-sm">
+                    <p className="text-textSecondary">
+                      <span className="text-textPrimary font-medium">Email:</span> {site.demoCredentials.student.email}
+                    </p>
+                    <p className="text-textSecondary">
+                      <span className="text-textPrimary font-medium">Password:</span> {site.demoCredentials.student.password}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
           {/* Action Buttons */}
           <div className="flex gap-4 justify-center">
             <motion.a
