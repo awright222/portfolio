@@ -155,11 +155,17 @@ const ProjectModal = ({ site, onClose }) => {
             <div className="mb-8">
               <h3 className="text-lg font-semibold text-textPrimary mb-3 flex items-center gap-2">
                 <Code className="w-5 h-5 text-accent" />
-                Demo Login Credentials
+                Try the Demo
               </h3>
+              <div className="glass p-4 rounded-xl mb-4">
+                <h4 className="text-sm font-semibold text-primary mb-2">🎯 Demo Experience</h4>
+                <p className="text-textSecondary text-sm mb-3">
+                  Every new account (including demo accounts) automatically starts with a comprehensive demo test featuring all question types. You can explore test creation, editing, and taking functionality immediately without setup.
+                </p>
+              </div>
               <div className="space-y-4">
                 <div className="glass p-4 rounded-xl">
-                  <h4 className="text-sm font-semibold text-primary mb-2">Teacher Account (Test Creation)</h4>
+                  <h4 className="text-sm font-semibold text-primary mb-2">Teacher Account (Test Creation & Management)</h4>
                   <div className="space-y-1 text-sm">
                     <p className="text-textSecondary">
                       <span className="text-textPrimary font-medium">Email:</span> {site.demoCredentials.teacher.email}
@@ -170,7 +176,7 @@ const ProjectModal = ({ site, onClose }) => {
                   </div>
                 </div>
                 <div className="glass p-4 rounded-xl">
-                  <h4 className="text-sm font-semibold text-secondary mb-2">Student Account (Test Taking)</h4>
+                  <h4 className="text-sm font-semibold text-secondary mb-2">Student Account (Test Taking Experience)</h4>
                   <div className="space-y-1 text-sm">
                     <p className="text-textSecondary">
                       <span className="text-textPrimary font-medium">Email:</span> {site.demoCredentials.student.email}
