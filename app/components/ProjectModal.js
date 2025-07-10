@@ -160,7 +160,7 @@ const ProjectModal = ({ site, onClose }) => {
               <div className="glass p-4 rounded-xl mb-4">
                 <h4 className="text-sm font-semibold text-primary mb-2">🎯 Demo Experience</h4>
                 <p className="text-textSecondary text-sm mb-3">
-                  Every new account (including demo accounts) automatically starts with a comprehensive demo test featuring all question types. You can explore test creation, editing, and taking functionality immediately without setup.
+                  Use the demo accounts below to explore the full test creation and management platform. Teachers can create and manage tests, while students can take and review them.
                 </p>
               </div>
               <div className="space-y-4">

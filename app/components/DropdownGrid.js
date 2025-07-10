@@ -13,25 +13,14 @@ const DropdownGrid = () => {
     {
       name: 'FORMULATE TESTS',
       url: 'https://fromulatetests.vercel.app/',
-      description: 'A comprehensive React-based educational testing platform designed for modern education. Features multi-role authentication, test creation, class management, and advanced analytics. Every new account starts with a pre-loaded demo test showcasing all question types.',
+      description: 'A comprehensive React-based educational testing platform designed for modern education. Features multi-role authentication, test creation, class management, and advanced analytics.',
       image: '/formulate.png',
       tools: ['React', 'Firebase', 'JavaScript', 'CSS3', 'React Router'],
       details: [
         'Built a full-featured educational platform with React 19.1.0 and Firebase 11.9.1, supporting multi-role user management for students, teachers, and administrators.',
         'Implemented comprehensive authentication system with Firebase Auth including Google Sign-In, profile management, and role-based access control.',
-        'Developed advanced test creation tools with multiple question types, media support, timer settings, browser lockdown security, and real-time analytics dashboard.',
-        'New accounts are automatically seeded with a comprehensive demo test featuring all question types (multiple choice, true/false, short answer, essay, etc.) so users can immediately explore the platform\'s capabilities.'
+        'Developed advanced test creation tools with multiple question types, media support, timer settings, browser lockdown security, and real-time analytics dashboard.'
       ],
-      demoCredentials: {
-        teacher: {
-          email: 'demo.teacher@example.com',
-          password: 'DemoTeacher2024'
-        },
-        student: {
-          email: 'demo.student@example.com', 
-          password: 'DemoStudent2024'
-        }
-      },
       icon: <Code className="w-6 h-6" />
     },
     { 
