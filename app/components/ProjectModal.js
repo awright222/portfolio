@@ -9,6 +9,7 @@ const ProjectModal = ({ site, onClose }) => {
   if (!site) return null;
 
   const repoUrls = {
+    'THINKDECK': 'https://github.com/awright222/thinkdeck',
     'FORMULATE TESTS': 'https://github.com/awright222/TestApp',
     'GUIDE FINDER': 'https://github.com/awright222/Guide_Finder',
     'LOVELY PAWS': 'https://github.com/awright222/Lovely-Paws-Hotel',

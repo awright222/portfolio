@@ -3,13 +3,27 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
-import { ExternalLink, Code, Rocket, Database, Globe } from 'lucide-react';
+import { ExternalLink, Code, Rocket, Database, Globe, BookOpen } from 'lucide-react';
 import ProjectModal from './ProjectModal';
 
 const DropdownGrid = () => {
   const [selectedSite, setSelectedSite] = useState(null);
 
   const sites = [
+    {
+      name: 'THINKDECK',
+      url: 'https://thinkdeck-lime.vercel.app/',
+      description: 'A modern flashcard application built with React, TypeScript, and Vite. Create, study, and master your learning materials with an intuitive drag-and-drop interface and beautiful 3D animations.',
+      image: '/ThinkDeck.png',
+      tools: ['React', 'TypeScript', 'Vite', 'CSS3', 'Papa Parse', 'XLSX'],
+      details: [
+        'Developed smart learning system with drag-and-drop functionality, allowing users to organize flashcards into "Review" and "Nailed it" folders with visual feedback through folder glow effects.',
+        'Implemented 3D physics-based animations with CSS cubic-bezier transforms, creating realistic card flipping effects with bounce animations and hover interactions.',
+        'Built comprehensive import system supporting CSV/Excel file uploads with Papa Parse and XLSX libraries, enabling batch flashcard creation with optional image support.',
+        'Created responsive 4-column grid layout with auto-save functionality using local storage for persistent progress tracking across study sessions.'
+      ],
+      icon: <BookOpen className="w-6 h-6" />
+    },
     {
       name: 'FORMULATE TESTS',
       url: 'https://fromulatetests.vercel.app/',
