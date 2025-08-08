@@ -105,8 +105,8 @@ const HeroSection = () => {
           <Image
             src="/IMG_1563.JPG"
             alt="Alex Wright"
-            width={200}
-            height={200}
+            width={250}
+            height={250}
             className="rounded-full mx-auto mb-8 glow"
             priority
           />
