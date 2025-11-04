@@ -3,13 +3,27 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
-import { ExternalLink, Code, Rocket, Database, Globe, BookOpen } from 'lucide-react';
+import { ExternalLink, Code, Rocket, Database, Globe, BookOpen, Hammer } from 'lucide-react';
 import ProjectModal from './ProjectModal';
 
 const DropdownGrid = () => {
   const [selectedSite, setSelectedSite] = useState(null);
 
   const sites = [
+    {
+      name: 'EMBERLINE',
+      url: 'https://emberline.vercel.app/',
+      description: 'A modern, handcrafted furniture website built with Next.js, TypeScript, and Tailwind CSS for a made-to-order woodworking business. Features responsive design, project gallery, and custom request forms.',
+      image: '/Emberline.png',
+      tools: ['Next.js', 'TypeScript', 'Tailwind CSS', 'API Routes'],
+      details: [
+        'Built a full-featured e-commerce-style website using Next.js 14 with TypeScript and Tailwind CSS, implementing the Pages Router for optimized file-based routing and SEO-friendly page structure.',
+        'Developed comprehensive form handling system with API routes for custom furniture requests, testimonial submissions, and contact forms, enabling seamless client-business communication.',
+        'Created responsive project gallery with modal viewer to showcase completed woodworking projects, along with a made-to-order collection displaying pre-designed furniture pieces with detailed specifications.',
+        'Implemented accessible components with keyboard navigation and ARIA labels, ensuring mobile-first responsive design that adapts seamlessly across all device sizes for optimal user experience.'
+      ],
+      icon: <Hammer className="w-6 h-6" />
+    },
     {
       name: 'THINKDECK',
       url: 'https://thinkdeck-lime.vercel.app/',

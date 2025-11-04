@@ -9,6 +9,7 @@ const ProjectModal = ({ site, onClose }) => {
   if (!site) return null;
 
   const repoUrls = {
+    'EMBERLINE': 'https://github.com/awright222/Emberline',
     'THINKDECK': 'https://github.com/awright222/thinkdeck',
     'FORMULATE TESTS': 'https://github.com/awright222/TestApp',
     'GUIDE FINDER': 'https://github.com/awright222/Guide_Finder',
