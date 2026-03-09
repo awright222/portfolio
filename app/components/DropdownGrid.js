@@ -3,13 +3,27 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
-import { ExternalLink, Code, Rocket, Database, Globe, BookOpen, Hammer } from 'lucide-react';
+import { ExternalLink, Code, Rocket, Database, Globe, BookOpen, Hammer, BarChart3 } from 'lucide-react';
 import ProjectModal from './ProjectModal';
 
 const DropdownGrid = () => {
   const [selectedSite, setSelectedSite] = useState(null);
 
   const sites = [
+    {
+      name: 'DEALFORGE',
+      url: 'https://dealforgehq.com',
+      description: 'Professional underwriting software for acquisition entrepreneurs and ground-up developers. Analyze real estate, business, hybrid, and development deals with AI-powered feedback, risk diagnostics, and institutional-grade financial modeling.',
+      image: '/DealForge.png',
+      tools: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Firebase', 'Redux Toolkit', 'OpenAI'],
+      details: [
+        'Built a full-featured deal analysis platform supporting four property types (real estate, business, hybrid, development) with 0–100 investment scoring, sensitivity analysis, recession stress testing, and risk radar diagnostics.',
+        'Integrated AI-powered deal feedback using OpenAI GPT alongside a built-in rule engine, delivering narrative analysis that evaluates deals like a disciplined buyer with coverage of SDE, valuation multiples, debt service, and risk flags.',
+        'Developed comprehensive financial modeling tools including amortization schedules, refinance modeling, rent comps with fragility testing, max allowable offer calculator, and negotiation brief PDF generation.',
+        'Implemented Firebase Auth with email verification and Firestore auto-sync, Redux Toolkit state management, FRED API integration for live market rates, guided onboarding tours, dark mode, and full PDF/CSV export suite.'
+      ],
+      icon: <BarChart3 className="w-6 h-6" />
+    },
     {
       name: 'EMBERLINE',
       url: 'https://emberline.vercel.app/',

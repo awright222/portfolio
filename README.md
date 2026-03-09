@@ -1,46 +1,43 @@
-## Alex's Portfolio!
+# Alex Wright — Portfolio
 
-My professional portfolio. I wanted to use practice my Next.js and Tailwind.CSS skills and decided to make my portfolio page!
+A personal portfolio site built with Next.js 15, React 19, Tailwind CSS, and Framer Motion. Showcases projects, technical skills, certifications, and contact info with animated glassmorphism UI and interactive project cards.
 
-# Find Me!
-[Portfolio](https://www.alexwrightportfolio.com/) | [LinkedIn](www.linkedin.com/in/alexgwright2)  | [GitHub](https://github.com/awright222)
+## Find Me
+
+[Portfolio](https://www.alexwrightportfolio.com/) | [LinkedIn](https://www.linkedin.com/in/alexgwright2) | [GitHub](https://github.com/awright222)
 
 ![portfolio home](portfolio.png)
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Tech Stack
+
+- **Framework:** Next.js 15.1.6 (App Router, Turbopack)
+- **UI:** React 19, Tailwind CSS 3.4
+- **Animations:** Framer Motion
+- **Icons:** Lucide React, React Icons
+- **Font:** Geist (via `next/font`)
+
+## Sections
+
+- **Hero** — Animated particle background, profile photo, and role badges
+- **About & Contact** — Bio, contact details, and downloadable resume
+- **Technical Skills** — Frontend, backend, databases, and core languages
+- **Certifications** — Professional certifications with detail modals
+- **Featured Projects** — Interactive card grid with project modals (DealForge, Emberline, ThinkDeck, Formulate Tests, Guide Finder, Mortgage Calculator, Lovely Paws, Migration Station)
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Build & Deploy
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# portfolio
+Deployed on [Vercel](https://vercel.com).
