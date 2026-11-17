@@ -18,6 +18,7 @@ export function Section({
   id,
   labelledBy,
   tone = "light",
+  padding = "py-20 md:py-28",
   className = "",
   children,
 }) {
@@ -25,7 +26,7 @@ export function Section({
     <section
       id={id}
       aria-labelledby={labelledBy}
-      className={`${tones[tone]} py-20 md:py-28 ${className}`}
+      className={`${tones[tone]} ${padding} ${className}`}
     >
       <Container>{children}</Container>
     </section>
@@ -37,7 +38,7 @@ const buttonBase =
 
 const buttonVariants = {
   primary:
-    "bg-charcoal text-ivory hover:bg-slate-deep focus-visible:outline-slate",
+    "bg-slate-deep text-ivory hover:bg-charcoal focus-visible:outline-slate",
   secondary:
     "border border-charcoal/25 text-charcoal hover:border-charcoal hover:bg-stone focus-visible:outline-slate",
   primaryDark:

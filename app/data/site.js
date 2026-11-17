@@ -44,6 +44,9 @@ export const work = {
 export const featured = {
   name: "DealForge",
   category: "Deal analysis",
+  // REVIEW: the "question" on each project is provisional wording, derived from the
+  // product's own tagline. It frames what each tool is for; it is not a claim about results.
+  question: "Is this deal worth doing?",
   url: "https://dealforgehq.com",
   image: "/DealForge.png",
   imageWidth: 2658,
@@ -51,7 +54,7 @@ export const featured = {
   imageAlt:
     "DealForge dashboard showing an 82 out of 100 deal score, cap rate, cash-on-cash return, DSCR, IRR and a ten-year cash flow chart for an eight-unit apartment building.",
   problem:
-    "Underwriting a deal properly takes hours. DealForge takes the deal details and returns cap rate, DSCR, IRR and cash flow, a 0–100 score, and a plain-language read on what is driving the result and what could go wrong.",
+    "Takes the deal details and returns cap rate, DSCR, IRR and cash flow, a 0–100 score, and a plain-language read on what is driving the result and what could go wrong.",
   points: [
     "Handles four kinds of deal: real estate, businesses, hybrids and ground-up development.",
     "Stress-tests a deal against a downturn and shows how sensitive the returns are to the assumptions.",
@@ -65,33 +68,35 @@ export const projects = [
   {
     name: "OppMap",
     category: "Market screening",
+    question: "Is this market worth a closer look?",
     url: "https://www.oppmap.com/",
     image: "/work/oppmap.png",
     imageAlt:
       "OppMap showing scores for self storage, RV storage and warehouse use in Bozeman, Montana, with a map of nearby competitors.",
     problem:
-      "Before spending hours underwriting an idea, you want to know whether the market is worth the effort. Enter a city and OppMap scores commercial property types there on demand, supply, cost and risk, using public data. The scoring is rule-based and the reasoning is shown.",
-    note: "Results can be carried into BuildGrade for a cost estimate or into DealForge for a full analysis.",
+      "Enter a city and OppMap scores commercial property types there on demand, supply, cost and risk, using public data. The scoring is rule-based and the reasoning is shown.",
   },
   {
     name: "BuildGrade",
     category: "Cost estimating",
+    question: "What will this cost to build?",
     url: "https://www.usebuildgrade.com/",
     image: "/work/buildgrade.png",
     imageAlt:
       "BuildGrade home page with estimated cost ranges for a pole barn shop and a stick-built garage.",
     problem:
-      "Early in a building project it is hard to know what things cost. BuildGrade has calculators for garages, shops, metal buildings and commercial projects. Change the size, building type, finish level or region and the estimated range updates. A methodology page explains the assumptions and limits.",
+      "Calculators for garages, shops, metal buildings and commercial projects. Change the size, building type, finish level or region and the estimated range updates. A methodology page explains the assumptions and limits.",
   },
   {
     name: "YardCalc",
     category: "Material calculators",
+    question: "How much material does this project need?",
     url: "https://yardcalcapp.com/",
     image: "/work/yardcalc.png",
     imageAlt:
       "YardCalc home page with gravel, mulch and concrete calculator cards.",
     problem:
-      "Working out how much gravel, mulch, concrete or topsoil a yard project needs is easy to get wrong. YardCalc takes the dimensions, including areas traced on a satellite map, and returns the amount in cubic yards, tons or bags, with a rough cost.",
+      "Takes the dimensions, including areas traced on a satellite map, and returns the amount in cubic yards, tons or bags, with a rough cost.",
   },
 ];
 

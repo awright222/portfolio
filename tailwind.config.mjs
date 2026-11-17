@@ -7,7 +7,11 @@ export default {
         ivory: "#F7F6F2",
         stone: "#E7E7E1",
         charcoal: "#252C2A",
-        sage: "#91A99B",
+        sage: {
+          DEFAULT: "#91A99B",
+          // Sage at 45% over ivory, as a solid color so it also works on dark blocks.
+          tint: "#C9D3CB",
+        },
         slate: {
           DEFAULT: "#647C85",
           // Darker slate for small text on light backgrounds (DEFAULT is ~4:1 on ivory).

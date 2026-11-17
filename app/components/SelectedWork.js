@@ -3,49 +3,114 @@ import { ArrowUpRight } from "lucide-react";
 import { featured, projects, site, work } from "../data/site";
 import { Button, ExternalLink, Section } from "./ui";
 
-// The screenshots link to the same place as the text link beside them. They stay
-// clickable for mouse and touch users, but are skipped by keyboard and screen
-// readers so each project has one link, not two.
-const duplicateLinkProps = { tabIndex: -1, "aria-hidden": true };
+const hostname = (url) => new URL(url).hostname.replace(/^www\./, "");
 
+function Chip({ children }) {
+  return (
+    <span className="rounded-full bg-sage px-3 py-1 text-[11px] font-medium uppercase tracking-[0.14em] text-charcoal">
+      {children}
+    </span>
+  );
+}
+
+// The real screenshot, as a plain figure (never a link): the "Visit" link beside each
+// project is its single destination, so nothing is mouse-only. `framed` (DealForge)
+// sits on a sage mat inside the slate block; the others get a neutral hairline border
+// and soft shadow, with the domain below.
+function Plate({
+  url,
+  image,
+  alt,
+  width,
+  height,
+  sizes,
+  framed = false,
+  className = "",
+}) {
+  const shot = (
+    <Image
+      src={image}
+      alt={alt}
+      width={width}
+      height={height}
+      sizes={sizes}
+      className={
+        framed
+          ? "h-auto w-full rounded-lg ring-1 ring-charcoal/10"
+          : "h-auto w-full rounded-xl ring-1 ring-charcoal/15 shadow-lg shadow-charcoal/10"
+      }
+    />
+  );
+
+  if (framed) {
+    return (
+      <figure
+        className={`rounded-2xl bg-sage-tint p-3 sm:p-3.5 ${className}`}
+      >
+        {shot}
+        <figcaption className="mt-2.5 px-0.5 text-xs text-charcoal">
+          {hostname(url)}
+        </figcaption>
+      </figure>
+    );
+  }
+
+  return (
+    <figure className={className}>
+      {shot}
+      <figcaption className="mt-3 px-0.5 text-xs text-muted">
+        {hostname(url)}
+      </figcaption>
+    </figure>
+  );
+}
+
+// DealForge: the lead entry, as a slate-blue block so it is clearly the most prominent.
 function FeaturedProject() {
   return (
-    <article className="grid gap-8 rounded-2xl border border-charcoal/10 bg-stone/50 p-5 sm:p-8 lg:grid-cols-12 lg:gap-12 lg:p-10">
-      <ExternalLink
-        href={featured.url}
-        className="group block self-start overflow-hidden rounded-xl ring-1 ring-charcoal/10 lg:col-span-7 lg:self-center"
-        {...duplicateLinkProps}
-      >
-        <Image
-          src={featured.image}
-          alt={featured.imageAlt}
-          width={featured.imageWidth}
-          height={featured.imageHeight}
-          sizes="(min-width: 1024px) 40rem, 100vw"
-          className="h-auto w-full transition-transform duration-500 motion-safe:group-hover:scale-[1.02]"
-        />
-      </ExternalLink>
-
-      <div className="lg:col-span-5">
-        <p className="eyebrow">Featured · {featured.category}</p>
-        <h3 className="mt-3 font-display text-4xl tracking-tight">
+    <article className="grid gap-6 rounded-2xl bg-slate-deep p-5 text-ivory sm:p-7 lg:grid-cols-[5fr_7fr] lg:grid-rows-[auto_1fr] lg:gap-x-12 lg:p-8">
+      <div className="lg:col-start-1 lg:row-start-1">
+        <div className="flex items-center gap-4">
+          <span aria-hidden="true" className="font-display text-4xl leading-none">
+            01
+          </span>
+          <Chip>{featured.category}</Chip>
+        </div>
+        <h3 className="mt-4 font-display text-4xl tracking-tight">
           {featured.name}
         </h3>
-        <p className="mt-4 leading-relaxed text-muted">{featured.problem}</p>
-        <ul className="mt-5 space-y-2.5 text-sm leading-relaxed">
+        <p className="mt-2 font-display text-2xl leading-snug text-stone">
+          {featured.question}
+        </p>
+      </div>
+
+      <Plate
+        url={featured.url}
+        image={featured.image}
+        alt={featured.imageAlt}
+        width={featured.imageWidth}
+        height={featured.imageHeight}
+        sizes="(min-width: 1024px) 40rem, 100vw"
+        framed
+        className="lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:self-center"
+      />
+
+      <div className="lg:col-start-1 lg:row-start-2">
+        <p className="leading-relaxed text-stone">{featured.problem}</p>
+        <ul className="mt-5 space-y-2.5 text-sm leading-relaxed text-stone">
           {featured.points.map((point) => (
             <li key={point} className="flex gap-3">
               <span
                 aria-hidden="true"
-                className="mt-2 h-px w-4 shrink-0 bg-slate"
+                className="mt-2.5 h-px w-4 shrink-0 bg-stone"
               />
               <span>{point}</span>
             </li>
           ))}
         </ul>
-        <p className="mt-5 text-xs text-muted">Built with {featured.stack}.</p>
-        <div className="mt-7">
-          <Button href={featured.url} external>
+        <p className="mt-4 text-xs text-stone">Built with {featured.stack}.</p>
+        <div className="mt-6">
+          <Button href={featured.url} variant="primaryDark" external>
             Visit DealForge
           </Button>
         </div>
@@ -54,42 +119,43 @@ function FeaturedProject() {
   );
 }
 
-// Phones: image above text. Tablets (md): image beside text, one project per row,
-// so cards are never squeezed into three narrow columns. Desktop (lg): three columns.
-function ProjectCard({ project }) {
+// Phones: heading, screenshot, then text. From tablet width up: text beside screenshot.
+function ProjectEntry({ project, number }) {
   return (
-    <article className="group flex flex-col md:grid md:grid-cols-5 md:items-start md:gap-8 lg:flex lg:gap-0">
-      <ExternalLink
-        href={project.url}
-        className="block overflow-hidden rounded-xl ring-1 ring-charcoal/10 md:col-span-2 lg:col-span-1"
-        {...duplicateLinkProps}
-      >
-        <Image
-          src={project.image}
-          alt={project.imageAlt}
-          width={1440}
-          height={900}
-          sizes="(min-width: 1024px) 22rem, (min-width: 768px) 20rem, 100vw"
-          className="h-auto w-full transition-transform duration-500 motion-safe:group-hover:scale-[1.03]"
-        />
-      </ExternalLink>
-
-      <div className="mt-6 md:col-span-3 md:mt-0 lg:col-span-1 lg:mt-6">
-        <p className="eyebrow">{project.category}</p>
-        <h3 className="mt-2 font-display text-2xl tracking-tight">
+    <article className="grid gap-5 md:grid-cols-[7fr_5fr] md:grid-rows-[auto_1fr] md:gap-x-12 lg:grid-cols-[2fr_1fr]">
+      <div className="md:col-start-1 md:row-start-1">
+        <div className="flex items-center gap-4">
+          <span
+            aria-hidden="true"
+            className="font-display text-4xl leading-none text-slate-deep"
+          >
+            {number}
+          </span>
+          <Chip>{project.category}</Chip>
+        </div>
+        <h3 className="mt-4 font-display text-3xl tracking-tight sm:text-4xl">
           {project.name}
         </h3>
-        <p className="mt-3 text-sm leading-relaxed text-muted">
-          {project.problem}
+        <p className="mt-2 font-display text-2xl leading-snug text-slate-deep">
+          {project.question}
         </p>
-        {project.note && (
-          <p className="mt-3 text-sm leading-relaxed text-muted">
-            {project.note}
-          </p>
-        )}
+      </div>
+
+      <Plate
+        url={project.url}
+        image={project.image}
+        alt={project.imageAlt}
+        width={1440}
+        height={900}
+        sizes="(min-width: 1024px) 22rem, (min-width: 768px) 20rem, 100vw"
+        className="md:col-start-2 md:row-span-2 md:row-start-1 md:self-start"
+      />
+
+      <div className="md:col-start-1 md:row-start-2">
+        <p className="max-w-xl leading-relaxed text-muted">{project.problem}</p>
         <ExternalLink
           href={project.url}
-          className="focus-ring link mt-3 inline-flex items-center gap-1 py-1 text-sm font-medium"
+          className="focus-ring link mt-4 inline-flex items-center gap-1 py-1 text-sm font-medium"
         >
           Visit {project.name}
           <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
@@ -101,7 +167,11 @@ function ProjectCard({ project }) {
 
 export default function SelectedWork() {
   return (
-    <Section id="work" labelledBy="work-heading">
+    <Section
+      id="work"
+      labelledBy="work-heading"
+      padding="py-16 md:py-20"
+    >
       <div className="max-w-3xl">
         <p className="eyebrow">Selected work</p>
         <h2
@@ -110,7 +180,7 @@ export default function SelectedWork() {
         >
           {work.heading}
         </h2>
-        <p className="mt-6 text-lg leading-relaxed text-muted">
+        <p className="mt-5 text-lg leading-relaxed text-muted">
           {work.introBefore}
           <ExternalLink
             href={site.links.meadowlark}
@@ -122,15 +192,22 @@ export default function SelectedWork() {
         </p>
       </div>
 
-      <div className="mt-14">
-        <FeaturedProject />
-      </div>
-
-      <div className="mt-14 grid gap-12 md:gap-14 lg:grid-cols-3 lg:gap-8">
-        {projects.map((project) => (
-          <ProjectCard key={project.name} project={project} />
+      <ol role="list" className="mt-8">
+        <li>
+          <FeaturedProject />
+        </li>
+        {projects.map((project, i) => (
+          <li
+            key={project.name}
+            className="mt-6 border-t-2 border-slate pt-6 last:border-b-2 last:pb-6"
+          >
+            <ProjectEntry
+              project={project}
+              number={String(i + 2).padStart(2, "0")}
+            />
+          </li>
         ))}
-      </div>
+      </ol>
     </Section>
   );
 }
