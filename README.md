@@ -1,28 +1,28 @@
 # Alex Wright — Portfolio
 
-A personal portfolio site built with Next.js 15, React 19, Tailwind CSS, and Framer Motion. Showcases projects, technical skills, certifications, and contact info with animated glassmorphism UI and interactive project cards.
+Personal portfolio for Alex Wright: program management, client relationships, and software development. Live at [alexwrightportfolio.com](https://www.alexwrightportfolio.com/).
 
-## Find Me
-
-[Portfolio](https://www.alexwrightportfolio.com/) | [LinkedIn](https://www.linkedin.com/in/alexgwright2) | [GitHub](https://github.com/awright222)
-
-![portfolio home](portfolio.png)
+[LinkedIn](https://www.linkedin.com/in/alexgwright2) | [GitHub](https://github.com/awright222)
 
 ## Tech Stack
 
-- **Framework:** Next.js 15.1.6 (App Router, Turbopack)
+- **Framework:** Next.js 15 (App Router)
 - **UI:** React 19, Tailwind CSS 3.4
-- **Animations:** Framer Motion
-- **Icons:** Lucide React, React Icons
-- **Font:** Geist (via `next/font`)
+- **Icons:** Lucide React
+- **Fonts:** Newsreader and Geist (self-hosted via `next/font`)
 
-## Sections
+## Structure
 
-- **Hero** — Animated particle background, profile photo, and role badges
-- **About & Contact** — Bio, contact details, and downloadable resume
-- **Technical Skills** — Frontend, backend, databases, and core languages
-- **Certifications** — Professional certifications with detail modals
-- **Featured Projects** — Interactive card grid with project modals (DealForge, Emberline, ThinkDeck, Formulate Tests, Guide Finder, Mortgage Calculator, Lovely Paws, Migration Station)
+A single page, built mostly from server components. Only the mobile menu is client-side JavaScript.
+
+- **Hero** — name, short introduction, portrait
+- **Selected Work** — DealForge, OppMap, BuildGrade, YardCalc
+- **Experience** — EXOS at Google, real estate, Meadowlark Labs
+- **Capabilities** — six areas, each tied to where the experience came from
+- **About** — introduction, education and training
+- **Contact** — email, LinkedIn, GitHub, Meadowlark Labs
+
+All copy and links live in [`app/data/site.js`](app/data/site.js). Components are in `app/components/`.
 
 ## Getting Started
 
@@ -40,4 +40,4 @@ npm run build
 npm start
 ```
 
-Deployed on [Vercel](https://vercel.com).
+Deployed on [Vercel](https://vercel.com) from the `main` branch.

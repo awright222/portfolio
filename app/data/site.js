@@ -1,6 +1,6 @@
 // All copy and links for the portfolio live here so they can be reviewed and
 // edited without touching components. Anything marked REVIEW is provisional or
-// could not be confirmed from the existing codebase, résumé, or product sites.
+// could not be confirmed from the existing codebase, the product sites, or Alex.
 
 export const site = {
   name: "Alex Wright",
@@ -100,14 +100,16 @@ export const projects = [
   },
 ];
 
-// REVIEW: roles and dates come from the existing résumé PDF (which is outdated).
+// REVIEW: the program management and real estate roles and dates (2015–2019,
+// 2019–2025) come from an older résumé that has since been removed; they are still
+// unconfirmed. The Meadowlark Labs dates are as stated by Alex: independent software
+// development began in 2025, and Meadowlark Labs LLC was founded in 2026 (title:
+// Founder). "Six years in real estate" appears in About and matches 2019–2025.
 // Removed from the page until confirmed, so they can be restored if wanted:
 //   - EXOS: "client engagement increased by 30%" (no baseline, period or definition)
 //   - EXOS: "team of 50+" (unclear whether direct reports or the wider team)
-// Meadowlark Labs: per Alex, software development began in 2025 and Meadowlark
-// Labs LLC was established in 2026. EXOS was the employer, and the work was done
-// at Google through EXOS; always write it as "EXOS at Google" and never present
-// Google as the direct employer.
+// EXOS was the employer, and the work was done at Google through EXOS; always write
+// it as "EXOS at Google" and never present Google as the direct employer.
 export const experience = {
   heading: "Experience",
   intro:
@@ -136,13 +138,13 @@ export const experience = {
         "The recurring problem was data scattered across spreadsheets and separate tools, which made decisions harder than they needed to be. That led me to start building software.",
     },
     {
-      dates: "2025 – Present",
-      role: "Independent software development",
-      org: "Meadowlark Labs",
+      dates: "2026 – Present",
+      role: "Founder",
+      org: "Meadowlark Labs LLC",
       orgUrl: site.links.meadowlark,
       points: [
-        "Completed App Academy's full-stack software engineering bootcamp in 2025 and started building software on my own.",
-        "Formed Meadowlark Labs LLC in 2026 as the studio behind my products.",
+        "Started building software independently in 2025, after completing App Academy's full-stack software engineering bootcamp.",
+        "Founded Meadowlark Labs LLC in 2026 as the company behind my products.",
         "Built and launched DealForge, OppMap, BuildGrade and YardCalc.",
       ],
     },
