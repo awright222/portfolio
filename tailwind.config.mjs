@@ -1,34 +1,29 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+  content: ["./app/**/*.{js,jsx,mdx}"],
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        surface: "var(--surface)",
-        primary: "var(--primary)",
-        secondary: "var(--secondary)",
-        accent: "var(--accent)",
-        textPrimary: "var(--text-primary)",
-        textSecondary: "var(--text-secondary)",
-        textMuted: "var(--text-muted)",
-        border: "var(--border)",
-      },
-      animation: {
-        float: "float 6s ease-in-out infinite",
-        gradientText: "gradientText 4s ease infinite",
-        particleFloat: "particleFloat 20s linear infinite",
-        staggerIn: "staggerIn 0.6s ease forwards",
-      },
-      backdropBlur: {
-        'xs': '2px',
+        ivory: "#F7F6F2",
+        stone: "#E7E7E1",
+        charcoal: "#252C2A",
+        sage: "#91A99B",
+        slate: {
+          DEFAULT: "#647C85",
+          // Darker slate for small text on light backgrounds (DEFAULT is ~4:1 on ivory).
+          deep: "#4F646C",
+        },
+        // Secondary body text on light backgrounds (~5.7:1 on ivory).
+        muted: "#5A6361",
       },
       fontFamily: {
-        'mono': ['JetBrains Mono', 'monospace'],
+        sans: [
+          "var(--font-geist-sans)",
+          "ui-sans-serif",
+          "system-ui",
+          "sans-serif",
+        ],
+        display: ["var(--font-display)", "Georgia", "serif"],
       },
     },
   },

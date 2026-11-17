@@ -4,7 +4,7 @@ const nextConfig = {
     ignoreDuringBuilds: false,
   },
   experimental: {
-    optimizePackageImports: ['framer-motion', 'lucide-react'],
+    optimizePackageImports: ['lucide-react'],
   },
 };
 
