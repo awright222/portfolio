@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls:*)",
+      "Bash(cat:*)",
+      "Bash(grep:*)",
+      "Bash(find:*)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(mkdir -p /tmp/*)",
+      "Bash(sips:*)",
+      "Bash(curl:*)",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\":*)",
+      "Bash(npm run build:*)",
+      "Bash(npm run lint:*)",
+      "Bash(npm run dev:*)",
+      "Bash(npm uninstall framer-motion motion react-icons)",
+      "WebFetch"
+    ]
+  }
+}
