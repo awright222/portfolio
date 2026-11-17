@@ -46,6 +46,11 @@ export const featured = {
   category: "Deal analysis",
   // REVIEW: the "question" on each project is provisional wording, derived from the
   // product's own tagline. It frames what each tool is for; it is not a claim about results.
+  // DealForge's feature list and stack were checked against the application source
+  // (Nov 2026): four deal types, recession stress test, sensitivity grid, 0-100 score,
+  // PDF reports including the negotiation brief, CSV export, and the OpenAI API
+  // (GPT-4.1-mini) with the built-in rule engine as the fallback. The other three
+  // products were checked against their public sites.
   question: "Is this deal worth doing?",
   url: "https://dealforgehq.com",
   image: "/DealForge.png",
@@ -58,7 +63,7 @@ export const featured = {
   points: [
     "Handles four kinds of deal: real estate, businesses, hybrids and ground-up development.",
     "Stress-tests a deal against a downturn and shows how sensitive the returns are to the assumptions.",
-    "Pairs an AI model with a fixed set of underwriting rules to write the summary.",
+    "Writes its analysis of each deal with an AI model, with a built-in rule-based analysis as the fallback.",
     "Exports PDFs and CSVs, including a negotiation brief.",
   ],
   stack: "Next.js, TypeScript, Firebase, OpenAI API",
@@ -104,7 +109,8 @@ export const projects = [
 // 2019–2025) come from an older résumé that has since been removed; they are still
 // unconfirmed. The Meadowlark Labs dates are as stated by Alex: independent software
 // development began in 2025, and Meadowlark Labs LLC was founded in 2026 (title:
-// Founder). "Six years in real estate" appears in About and matches 2019–2025.
+// Founder). The real estate role (2019-2025) is about six years; the Meadowlark site
+// also says six years.
 // Removed from the page until confirmed, so they can be restored if wanted:
 //   - EXOS: "client engagement increased by 30%" (no baseline, period or definition)
 //   - EXOS: "team of 50+" (unclear whether direct reports or the wider team)
@@ -121,7 +127,7 @@ export const experience = {
       org: "EXOS at Google",
       points: [
         "Led a team and worked with leadership, stakeholders and clients on cross-functional programs.",
-        "Led initiatives to increase client engagement, using tailored solutions and data-driven decisions.",
+        "Led initiatives aimed at increasing client engagement.",
         "Acted as a technical advisor to leadership, using data to find where workflows could be improved.",
       ],
     },
@@ -130,12 +136,10 @@ export const experience = {
       role: "Licensed Realtor",
       org: "Real estate",
       points: [
-        "Negotiated and closed transactions for buyers, investors and builders, relying on market analysis and ongoing client relationships.",
+        "Negotiated and closed transactions for buyers, investors and builders.",
         "Built custom market analyses to show investment opportunities and help clients decide.",
-        "Ran targeted marketing campaigns to raise property visibility.",
+        "Ran marketing campaigns to promote properties.",
       ],
-      closing:
-        "The recurring problem was data scattered across spreadsheets and separate tools, which made decisions harder than they needed to be. That led me to start building software.",
     },
     {
       dates: "2026 – Present",
@@ -159,27 +163,27 @@ export const capabilities = {
   items: [
     {
       title: "Client & stakeholder relationships",
-      body: "With EXOS at Google, I worked with leadership, stakeholders and clients across teams. In real estate I worked directly with buyers, investors and builders, and those relationships were a big part of closing transactions.",
+      body: "I've worked with leadership, stakeholders and clients across teams, and in real estate directly with buyers, investors and builders. Those relationships were a big part of closing deals.",
       source: "EXOS at Google · Real estate",
     },
     {
       title: "Consultative sales & negotiation",
-      body: "As a realtor I negotiated and closed transactions for buyers, investors and builders. I built custom market analyses to show clients their options and help them make important decisions, and ran marketing campaigns to make properties more visible.",
+      body: "I negotiated and closed transactions for buyers, investors and builders. My market analyses showed clients their options and helped them make important decisions.",
       source: "Real estate",
     },
     {
       title: "Program & operations management",
-      body: "With EXOS at Google I led a team and managed programs that involved leadership, stakeholders and clients, with a focus on how efficiently the operation ran.",
+      body: "I led a team and managed programs, with a focus on how efficiently the operation ran.",
       source: "EXOS at Google",
     },
     {
       title: "Process improvement",
-      body: "With EXOS at Google I acted as a technical advisor to leadership, using data to find where workflows could be improved. In real estate I saw decisions made from scattered spreadsheets and separate tools, and I've since built software for part of that work: deal underwriting, market screening and cost estimating.",
+      body: "I advised leadership on where workflows could be improved, using data to back it up. More recently I've built software for work that usually lives in spreadsheets: deal underwriting, market screening and cost estimating.",
       source: "EXOS at Google · Meadowlark Labs",
     },
     {
       title: "Product development",
-      body: "I've built and launched four products, DealForge, OppMap, BuildGrade and YardCalc, aimed at the decisions people make about real estate, construction and yard projects.",
+      body: "I've built and launched four products for the decisions people make about real estate, construction and yard projects.",
       source: "Meadowlark Labs",
     },
     {
@@ -209,8 +213,7 @@ export const capabilities = {
 export const about = {
   heading: "About",
   paragraphs: [
-    "I started in program management at EXOS at Google, spent six years in real estate working with buyers, investors and builders, and now build software through Meadowlark Labs.",
-    "In all three, the work was mostly the same: listen to someone with a decision to make or a process that isn't working, figure out what is really going on, and help them get to something that works.",
+    "Whether it was a program, a property or a piece of software, the work has mostly been the same: listen to someone with a decision to make or a process that isn't working, figure out what is really going on, and help them get to something that works.",
     "I'm looking for client-facing technical work, such as solutions engineering, technical account management and customer success.",
     "Outside of work I'm usually outdoors or with family.",
   ],
